@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Timestamp Saver</title>
+  <style>
+    body {
+      width: 350px;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 15px;
+      color: #333;
+    }
+    .container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    h1 {
+      color: #FF0000;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    #savedTimestamps {
+      max-height: 250px;
+      overflow-y: auto;
+      margin-bottom: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+    }
+    .timestamp-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background-color 0.2s;
+    }
+    .timestamp-item:hover {
+      background-color: #f5f5f5;
+    }
+    .timestamp-item span {
+      max-width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .action-btn {
+      background-color: #FF0000;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-left: 5px;
+    }
+    .action-btn:hover {
+      background-color: #CC0000;
+    }
+    .action-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .action-buttons button {
+      flex-grow: 1;
+      margin: 0 5px;
+      padding: 10px;
+      background-color: #FF0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .action-buttons button:hover {
+      background-color: #CC0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Timestamp Saver</h1>
+    <div id="savedTimestamps"></div>
+    <div class="action-buttons">
+      <button id="exportMD">Export as Markdown</button>
+      <button id="clearTimestamps">Clear All</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
